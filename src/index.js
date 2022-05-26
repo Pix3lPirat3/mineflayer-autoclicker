@@ -10,21 +10,21 @@ module.exports = async function(bot) {
   bot.autoclicker.interval = null // Do not interact with manually, used to store the interval ID
 
   bot.autoclicker.options = {
-    maxDistance: 3.5, // Max distance to hit entities (Default: 3.5)
+    max_distance: 3.5, // Max distance to hit entities (Default: 3.5)
     swing_through: ['experience_orb'], // Hit through entities (Default: ['experience_orb'])
     blacklist: ['player'], // Do not hit certain entities (Default: ['player'])
     stop_on_window: true, // Stop if a window is opened (Default: true)
-    alwaysSwing: true, // Always swing, even if there is no entity (Default: true)
-    delay: 1500, // tool ('proper tool cooldown') or SET delay (SET delay + RANDOMIZE)
+    always_swing: true, // Always swing, even if there is no entity (Default: true)
+    delay: 1500,
   }
 
   bot.autoclicker.start = function() {
     if (bot.autoclicker.interval) return;
     bot.autoclicker.interval = setInterval(async function() {
-      let entity = entityAtCursor(bot.autoclicker.options.maxDistance, bot.autoclicker.options.swing_through);
+      let entity = entityAtCursor(bot.autoclicker.options.max_distance, bot.autoclicker.options.swing_through);
       if(bot.autoclicker.options.stop_on_window && bot.currentWindow) return;
       if (!entity || bot.autoclicker.options.blacklist.includes(entity.name)) {
-          return bot.autoclicker.options.alwaysSwing ? bot.swingArm() : null;
+          return bot.autoclicker.options.always_swing ? bot.swingArm() : null;
       }
       bot.attack(entity, true);
     }, bot.autoclicker.options.delay);
