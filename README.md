@@ -7,7 +7,7 @@
 
 This plugin is built using Node and can be installed using:
 ```bash
-npm install --save mineflayer-autoclicker
+# Unfinished (npm install --save mineflayer-autoclicker)
 ```
 
 This plugin has no dependencies.
