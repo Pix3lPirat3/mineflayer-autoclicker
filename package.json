@@ -1,6 +1,6 @@
 {
   "name": "mineflayer-autoclicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An autoclicker plugin for mineflayer",
   "main": "index.js",
   "repository": {
