@@ -5,6 +5,7 @@ Welcome to the *mineflayer-autoclicker* API documentation page.
 ## Table of Contents <!-- omit in toc -->
 
 - [1. Usage](#1-usage)
+- [2. Options](#2-options)
 
 ## 1. Usage
 
