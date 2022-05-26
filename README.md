@@ -14,8 +14,6 @@ This plugin has no dependencies.
 
 ### Simple Bot
 
-The brief description goes here.
-
 ```js
 // Create your bot
 const mineflayer = require("mineflayer");
