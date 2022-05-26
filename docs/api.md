@@ -6,6 +6,12 @@ Welcome to the *mineflayer-plugin-template* API documentation page.
 
 - [1. Summary](#1-summary)
 
-## 1. Summary
+## 1. Usage
 
-The summary.
+### Start Clicking
+
+bot.autoclicker.start()
+
+### Stop Clicking
+
+bot.autoclicker.stop()

@@ -1,14 +1,5 @@
-<h1 align="center">mineflayer-plugin-template</h1>
-<p align="center"><i>A simple template repository for developing Mineflayer plugins through Typescript.</i></p>
-
-<p align="center">
-  <img src="https://github.com/TheDudeFromCI/mineflayer-plugin-template/workflows/Build/badge.svg" />
-  <img src="https://img.shields.io/npm/v/mineflayer-plugin-template" />
-  <img src="https://img.shields.io/github/repo-size/TheDudeFromCI/mineflayer-plugin-template" />
-  <img src="https://img.shields.io/npm/dm/mineflayer-plugin-template" />
-  <img src="https://img.shields.io/github/contributors/TheDudeFromCI/mineflayer-plugin-template" />
-  <img src="https://img.shields.io/github/license/TheDudeFromCI/mineflayer-plugin-template" />
-</p>
+<h1 align="center">mineflayer-autoclicker</h1>
+<p align="center"><i> A simple autoclicker plugin for Mineflayer.</i></p>
 
 ---
 
@@ -16,10 +7,10 @@
 
 This plugin is built using Node and can be installed using:
 ```bash
-npm install --save mineflayer-plugin-template
+npm install --save mineflayer-autoclicker
 ```
 
-This plugin has a relies on [random-plugin]() for a-b-c. That plugin should be loaded first.
+This plugin has no dependencies.
 
 ### Simple Bot
 
@@ -30,19 +21,27 @@ The brief description goes here.
 const mineflayer = require("mineflayer");
 const bot = mineflayer.createBot({ username: "Player" });
 
-// Do stuff
-bot.doStuff()
+// Start clicking.. (and load plugin)
+bot.on('spawn', function() {
+  bot.loadPlugin(require('mineflayer-autoclicker'))
+  bot.autoclicker.start();
+});
+
+// Stop clicking..
+bot.on('death', function() {
+  bot.autoclicker.stop()
+})
 ```
 
 ### Documentation
 
-[API](https://github.com/TheDudeFromCI/mineflayer-plugin-template/blob/master/docs/api.md)
+[API](https://github.com/Pix3lPirat3/mineflayer-autoclicker/blob/master/docs/api.md)
 
-[Examples](https://github.com/TheDudeFromCI/mineflayer-plugin-template/tree/master/examples)
+[Examples](https://github.com/Pix3lPirat3/mineflayer-autoclicker/blob/master/examples)
 
 ### License
 
-This project uses the [MIT](https://github.com/TheDudeFromCI/mineflayer-plugin-template/blob/master/LICENSE) license.
+This project uses the [MIT](https://github.com/Pix3lPirat3/mineflayer-autoclicker/blob/master/LICENSE) license.
 
 ### Contributions
 
