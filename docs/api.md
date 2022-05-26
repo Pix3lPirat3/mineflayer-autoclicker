@@ -4,7 +4,7 @@ Welcome to the *mineflayer-plugin-template* API documentation page.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [1. Summary](#1-summary)
+- [1. USage](#1-usage)
 
 ## 1. Usage
 
