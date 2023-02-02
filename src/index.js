@@ -28,7 +28,7 @@ module.exports = async function(bot) {
       }
       bot.attack(entity, true);
     }, bot.autoclicker.options.delay);
-    
+    bot.autoclicker.running = true;
   }
 
   bot.autoclicker.stop = function() {
